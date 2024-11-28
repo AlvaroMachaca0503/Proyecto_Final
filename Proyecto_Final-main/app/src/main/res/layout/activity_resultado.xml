@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF4081">
+
+
+    <!-- Texto de Resultado -->
+    <TextView
+        android:id="@+id/resultadoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Botón para Intentar de Nuevo -->
+    <Button
+        android:id="@+id/botonIntentarDeNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intentar de Nuevo"
+        app:layout_constraintTop_toBottomOf="@id/resultadoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Botón para Continuar -->
+    <Button
+        android:id="@+id/botonContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@id/botonIntentarDeNuevo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

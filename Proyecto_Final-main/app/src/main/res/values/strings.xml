@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Preguntados</string>
+    <string name="jugar">Jugar</string>
+    <string name="puntajes">Puntajes</string>
+    <string name="login_title">Iniciar sesión</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="login_button_text">Iniciar sesión</string>
+
+    <string name="login_button_desc">Botón para iniciar sesión</string>
+
+    <string name="toast_login_successful">Login exitoso</string>
+    <string name="toast_login_failed">Credenciales incorrectas</string>
+
+</resources>
