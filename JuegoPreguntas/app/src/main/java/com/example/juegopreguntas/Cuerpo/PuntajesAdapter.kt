@@ -1,4 +1,4 @@
-// Creador: Enyelbert Anderson Panta Huaracha
+// Creador: Alvaro Andre Machaca Melendez
 // Fecha de creación: 11 de diciembre de 2024
 // Descripción: Adaptador para mostrar una lista de puntajes.
 
