@@ -1,4 +1,4 @@
-// Creador: Enyelbert Anderson Panta Huaracha
+// Creador: Andrea del Rosario Velazco Yana
 // Fecha de creación: 11 de diciembre de 2024
 // Descripción: Fragmento que muestra una pregunta y sus opciones de respuesta.
 
