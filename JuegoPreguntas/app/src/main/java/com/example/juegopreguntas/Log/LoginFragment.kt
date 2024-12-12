@@ -4,52 +4,62 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.juegopreguntas.DataManager
 import com.example.juegopreguntas.R
+import com.example.juegopreguntas.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
-    private lateinit var usuarioEditText: EditText
-    private lateinit var contrasenaEditText: EditText
-    private lateinit var ingresarButton: Button
-    private lateinit var crearCuentaButton: Button
-    private lateinit var olvidarContrasenaButton: Button
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        usuarioEditText = view.findViewById(R.id.usuarioEditText)
-        contrasenaEditText = view.findViewById(R.id.contrasenaEditText)
-        ingresarButton = view.findViewById(R.id.ingresarButton)
-        crearCuentaButton = view.findViewById(R.id.crearCuentaButton)
-        olvidarContrasenaButton = view.findViewById(R.id.olvidarContrasenaButton)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        ingresarButton.setOnClickListener {
-            val usuario = usuarioEditText.text.toString()
-            val contrasena = contrasenaEditText.text.toString()
+        binding.ingresarButton.setOnClickListener {
+            val usuario = binding.usuarioEditText.text.toString()
+            val contrasena = binding.contrasenaEditText.text.toString()
 
-            if (usuario == "usuario" && contrasena == "contrasena") {
+            val dataManager = DataManager(requireContext())
+            val usuarioGuardado = dataManager.obtenerUsuario(usuario)
+
+            if (usuarioGuardado != null && usuarioGuardado.contrasena == encriptarContrasena(contrasena)) {
+                // Iniciar sesión exitosamente
                 findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
             } else {
                 Toast.makeText(context, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
 
-        crearCuentaButton.setOnClickListener {
+        binding.crearCuentaButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_crearCuentaFragment)
         }
 
-        olvidarContrasenaButton.setOnClickListener {
+        binding.olvidarContrasenaButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_olvidarContrasenaFragment)
         }
+    }
 
-        return view
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    // Debes implementar esta función para encriptar la contraseña
+    private fun encriptarContrasena(contrasena: String): String {
+        // ... (tu código para encriptar la contraseña)
+        // Por ahora, solo devolvemos la contraseña sin encriptar
+        return contrasena
     }
 }

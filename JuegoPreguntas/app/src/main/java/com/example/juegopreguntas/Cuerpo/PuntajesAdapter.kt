@@ -1,11 +1,11 @@
-package com.example.juegopreguntas.Cuerpo // Reemplaza con tu paquete
+package com.example.juegopreguntas.Cuerpo
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.juegopreguntas.R // Reemplaza con tu paquete
+import com.example.juegopreguntas.R
 
 class PuntajesAdapter(private val puntajes: List<Pair<String, Int>>) :
     RecyclerView.Adapter<PuntajesAdapter.PuntajeViewHolder>() {

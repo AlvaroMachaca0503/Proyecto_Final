@@ -36,18 +36,20 @@ class SeleccionPreguntaFragment : Fragment() {
 
         handler = Handler(Looper.getMainLooper())
         runnable = Runnable { cambiarCategoria() }
-        handler.postDelayed(runnable, 500) // Cambiar categoría cada 500ms
+        handler.postDelayed(runnable, 100) // Cambiar categoría cada 500ms
 
         binding.btnStop.setOnClickListener {
             handler.removeCallbacks(runnable) // Detener el cambio de categorías
 
-            if (categorias.isNotEmpty()) { // Verificar si la lista no está vacía
-                // Navegar a JuegoFragment, pasando la categoría seleccionada
+            if (categorias.isNotEmpty()) {
+                val nombreCategoria = categorias[indiceCategoriaActual]
+                println("Nombre de la categoría en SeleccionPreguntaFragment: $nombreCategoria")
+
                 val bundle = Bundle()
-                bundle.putString("categoria", categorias[indiceCategoriaActual])
+                bundle.putString("categoria", nombreCategoria)
                 findNavController().navigate(R.id.action_seleccionPreguntaFragment_to_juegoFragment, bundle)
             } else {
-                // Manejar el caso de lista vacía, por ejemplo, mostrar un mensaje de error
+                // Manejar el caso de lista vacía
                 Toast.makeText(requireContext(), "No se encontraron categorías", Toast.LENGTH_SHORT).show()
             }
         }
@@ -56,10 +58,10 @@ class SeleccionPreguntaFragment : Fragment() {
     }
 
     private fun cambiarCategoria() {
-        if (categorias.isNotEmpty()) { // Verificar si la lista no está vacía
+        if (categorias.isNotEmpty()) {
             indiceCategoriaActual = (indiceCategoriaActual + 1) % categorias.size
             binding.tvCategoria.text = categorias[indiceCategoriaActual]
-            handler.postDelayed(runnable, 500)
+            handler.postDelayed(runnable, 100)
         }
     }
 

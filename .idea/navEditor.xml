@@ -8,6 +8,27 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="correctFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_correctFragment_to_juegoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="crearCuentaFragment">
                     <value>
                       <LayoutPositions>
@@ -29,6 +50,27 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="incorrectFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_incorrectFragment_to_juegoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="juegoFragment">
                     <value>
                       <LayoutPositions>
@@ -40,6 +82,16 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_juegoFragment_to_correctFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_juegoFragment_to_incorrectFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_juegoFragment_to_puntajesFragment">
                               <value>
                                 <LayoutPositions />
@@ -92,11 +144,6 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_menuFragment_to_juegoFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_menuFragment_to_puntajesFragment">
                               <value>
                                 <LayoutPositions />
