@@ -13,12 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Reproducir música de fondo
-        mediaPlayer = MediaPlayer.create(this, R.raw.musica_fondo) // Reemplaza con el ID de tu archivo de música
-        mediaPlayer.isLooping = true
+        mediaPlayer = MediaPlayer.create(this, R.raw.musica_fondo)
         mediaPlayer.start()
 
-        // Configurar fondo de pantalla (opcional)
-        // window.decorView.setBackgroundResource(R.drawable.fondo_pantalla) // Reemplaza con el ID de tu imagen de fondo
+
+        window.decorView.setBackgroundResource(R.drawable.fondo_pantalla)
     }
 
     override fun onDestroy() {

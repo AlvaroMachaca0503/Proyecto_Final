@@ -30,9 +30,9 @@ class OlvidarContrasenaFragment : Fragment() {
             if (correo.isBlank()) {
                 Toast.makeText(context, "Por favor, ingrese su correo electrónico", Toast.LENGTH_SHORT).show()
             } else {
-                // TODO: Simular el envío de correo para recuperar contraseña
+
                 Toast.makeText(context, "Se ha enviado un correo a $correo para recuperar su contraseña", Toast.LENGTH_SHORT).show()
-                // Puedes agregar aquí la lógica para volver al LoginFragment
+
             }
         }
 

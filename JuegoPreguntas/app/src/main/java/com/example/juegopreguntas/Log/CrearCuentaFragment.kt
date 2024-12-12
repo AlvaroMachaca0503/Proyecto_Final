@@ -42,7 +42,7 @@ class CrearCuentaFragment : Fragment() {
             } else if (contrasena != confirmarContrasena) {
                 Toast.makeText(context, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
             } else {
-                // TODO: Simular la creación de la cuenta (sin base de datos)
+
                 Toast.makeText(context, "Cuenta creada exitosamente", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_crearCuentaFragment_to_loginFragment)
             }

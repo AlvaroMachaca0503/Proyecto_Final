@@ -35,7 +35,6 @@ class LoginFragment : Fragment() {
             val usuario = usuarioEditText.text.toString()
             val contrasena = contrasenaEditText.text.toString()
 
-            // TODO: Implementar lógica de autenticación (simulada aquí)
             if (usuario == "usuario" && contrasena == "contrasena") {
                 findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
             } else {
