@@ -1,4 +1,4 @@
-// Creador: Enyelbert Anderson Panta Huaracha
+// Creador: Andrea Velazco Yana
 // Fecha de creación: 11 de diciembre de 2024
 // Descripción: Fragmento que muestra la lista de puntajes.
 
