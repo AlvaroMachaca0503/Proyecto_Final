@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/crearCuentaFragment">
+
+    <fragment
+        android:id="@+id/crearCuentaFragment"
+        android:name="com.example.juegopreguntas.Log.CrearCuentaFragment"
+        android:label="CrearCuentaFragment" >
+        <action
+            android:id="@+id/action_crearCuentaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.juegopreguntas.Log.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_crearCuentaFragment"
+            app:destination="@id/crearCuentaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_olvidarContrasenaFragment"
+            app:destination="@id/olvidarContrasenaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_seleccionPreguntaFragment"
+            app:destination="@id/seleccionPreguntaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_puntajesFragment"
+            app:destination="@id/puntajesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.JuegoFragment"
+        android:label="JuegoFragment" >
+        <action
+            android:id="@+id/action_juegoFragment_to_puntajesFragment"
+            app:destination="@id/puntajesFragment" />
+        <action
+            android:id="@+id/action_juegoFragment_to_correctFragment"
+            app:destination="@id/correctFragment" />
+        <action
+            android:id="@+id/action_juegoFragment_to_incorrectFragment"
+            app:destination="@id/incorrectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/correctFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.CorrectFragment"
+        android:label="CorrectFragment" >
+        <action
+            android:id="@+id/action_correctFragment_to_juegoFragment"
+            app:destination="@id/juegoFragment"
+            app:popUpTo="@+id/juegoFragment"
+        app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/incorrectFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.IncorrectFragment"
+        android:label="IncorrectFragment" >
+        <action
+            android:id="@+id/action_incorrectFragment_to_juegoFragment"
+            app:destination="@id/juegoFragment"
+            app:popUpTo="@+id/juegoFragment"
+        app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/puntajesFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.PuntajesFragment"
+        android:label="PuntajesFragment" />
+    <fragment
+        android:id="@+id/seleccionPreguntaFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.SeleccionPreguntaFragment"
+        android:label="SeleccionPreguntaFragment" >
+        <action
+            android:id="@+id/action_seleccionPreguntaFragment_to_juegoFragment"
+            app:destination="@id/juegoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/olvidarContrasenaFragment"
+        android:name="com.example.juegopreguntas.Log.OlvidarContrasenaFragment"
+        android:label="OlvidarContrasenaFragment" />
+    <action
+        android:id="@+id/action_seleccionPreguntaFragment_to_juegoFragment"
+        app:destination="@id/juegoFragment">
+        <argument
+            android:name="categoria"
+            app:argType="string" />
+    </action>
+</navigation>
