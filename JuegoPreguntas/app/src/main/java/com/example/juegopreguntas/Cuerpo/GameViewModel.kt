@@ -1,3 +1,4 @@
+//Creado por: Andrea del Rosario Velazco Yana
 // Fecha de creación: 11 de diciembre de 2024
 // Descripción: ViewModel que almacena el índice de la pregunta actual.
 
