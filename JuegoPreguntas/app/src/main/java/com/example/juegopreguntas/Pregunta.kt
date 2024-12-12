@@ -1,6 +1,6 @@
 package com.example.juegopreguntas
 
-data class Preguntas(
+data class Pregunta(
     val texto: String,
     val opcion1: String,
     val opcion2: String,
@@ -8,3 +8,5 @@ data class Preguntas(
     val opcion4: String,
     val respuestaCorrecta: Int // Índice de la respuesta correcta (1-4)
 )
+
+

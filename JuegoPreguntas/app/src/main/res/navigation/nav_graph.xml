@@ -40,8 +40,8 @@
         android:name="com.example.juegopreguntas.Cuerpo.MenuFragment"
         android:label="MenuFragment" >
         <action
-            android:id="@+id/action_menuFragment_to_juegoFragment"
-            app:destination="@id/juegoFragment" />
+            android:id="@+id/action_menuFragment_to_seleccionPreguntaFragment"
+        app:destination="@id/seleccionPreguntaFragment" />
         <action
             android:id="@+id/action_menuFragment_to_puntajesFragment"
             app:destination="@id/puntajesFragment" />
@@ -54,4 +54,12 @@
         android:id="@+id/puntajesFragment"
         android:name="com.example.juegopreguntas.Cuerpo.PuntajesFragment"
         android:label="PuntajesFragment" />
+    <fragment
+        android:id="@+id/seleccionPreguntaFragment"
+        android:name="com.example.juegopreguntas.Cuerpo.SeleccionPreguntaFragment"
+        android:label="SeleccionPreguntaFragment" >
+        <action
+            android:id="@+id/action_seleccionPreguntaFragment_to_juegoFragment"
+            app:destination="@id/juegoFragment" />
+    </fragment>
 </navigation>

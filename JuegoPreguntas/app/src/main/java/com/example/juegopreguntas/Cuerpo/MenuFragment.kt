@@ -21,7 +21,7 @@ class MenuFragment : Fragment() {
         val puntajesButton: Button = view.findViewById(R.id.puntajesButton)
 
         iniciarJuegoButton.setOnClickListener {
-            findNavController().navigate(R.id.action_menuFragment_to_juegoFragment)
+            findNavController().navigate(R.id.action_menuFragment_to_seleccionPreguntaFragment)
         }
 
         puntajesButton.setOnClickListener {
