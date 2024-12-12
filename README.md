@@ -23,3 +23,6 @@ Características principales
    - Espera a que Android Studio termine de sincronizar y construir el proyecto. Esto puede tardar unos minutos la primera vez.
    - Haz clic en el botón "Run" (el icono verde de "play") en la barra de herramientas de Android Studio.
    - Selecciona un dispositivo virtual o conecta un dispositivo físico con USB debugging habilitado para ejecutar la aplicación.
+
+VIDEO DE LA APLICACION:
+https://drive.google.com/file/d/11Pm7cjMYqVPLDBTjyOygEju1NWsNUHlN/view 
