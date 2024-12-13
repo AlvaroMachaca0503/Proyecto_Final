@@ -56,7 +56,7 @@ class JuegoFragment : Fragment() {
 
         // Observa el tiempo restante.
         viewModel.tiempoRestante.observe(viewLifecycleOwner) { tiempo ->
-            binding.temporizadorTextView.text = tiempo.toString()
+            binding.temporizadorTextView.text = "¡Vamos! te quedan ${tiempo}s"
             if (tiempo == 0) {
                 Toast.makeText(requireContext(), "¡Se acabó el tiempo!", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_juegoFragment_to_incorrectFragment)
