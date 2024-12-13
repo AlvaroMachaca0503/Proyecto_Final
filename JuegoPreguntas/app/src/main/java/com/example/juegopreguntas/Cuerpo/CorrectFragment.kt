@@ -7,6 +7,7 @@ package com.example.juegopreguntas.Cuerpo
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -24,6 +25,10 @@ class CorrectFragment : Fragment(R.layout.fragment_correct) {
         // Muestra el texto "¡CORRECTO!" en la pantalla.
         val resultTextView: TextView = view.findViewById(R.id.resultTextView)
         resultTextView.text = "¡CORRECTO!"
+
+        val correctImageView: ImageView = view.findViewById(R.id.correctImageView)
+        correctImageView.setImageResource(R.drawable.check_correcto)
+
 
         // Configura el botón "Siguiente Pregunta" para que al presionarlo,
         // la aplicación navegue al fragmento "JuegoFragment".
