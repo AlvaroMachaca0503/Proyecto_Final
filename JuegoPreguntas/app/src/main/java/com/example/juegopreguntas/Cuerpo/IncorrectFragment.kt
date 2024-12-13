@@ -7,6 +7,7 @@ package com.example.juegopreguntas.Cuerpo
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -25,6 +26,10 @@ class IncorrectFragment : Fragment(R.layout.fragment_incorrect) {
         // Muestra el texto "¡INCORRECTO!" en la pantalla.
         val resultTextView: TextView = view.findViewById(R.id.resultTextView)
         resultTextView.text = "¡INCORRECTO!"
+
+        val incorrectImageView: ImageView = view.findViewById(R.id.incorrectImageView)
+        incorrectImageView.setImageResource(R.drawable.check_incorrecto)
+
 
         // Configura el botón "Siguiente Pregunta" para que al presionarlo,
         // la aplicación navegue al fragmento "JuegoFragment".
