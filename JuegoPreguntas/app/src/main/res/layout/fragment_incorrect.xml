@@ -7,6 +7,14 @@
     android:gravity="center"
     android:background="@color/pink_background">
 
+    <!-- Imagen de incorrecto -->
+    <ImageView
+        android:id="@+id/incorrectImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/check_incorrecto"
+        android:contentDescription="Imagen de incorrecto" />
+
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
