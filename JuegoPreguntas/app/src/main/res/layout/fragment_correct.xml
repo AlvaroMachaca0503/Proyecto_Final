@@ -7,6 +7,15 @@
     android:gravity="center"
     android:background="@color/pink_background">
 
+    <!-- Imagen de correcto -->
+    <ImageView
+        android:id="@+id/correctImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/check_correcto"
+        android:contentDescription="Imagen de correcto" />
+
+
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
