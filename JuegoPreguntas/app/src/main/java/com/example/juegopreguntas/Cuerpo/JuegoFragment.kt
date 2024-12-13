@@ -51,7 +51,20 @@ class JuegoFragment : Fragment() {
             }
 
         viewModel.reiniciarIndicePregunta()
+        viewModel.iniciarTemporizador()
         mostrarPregunta()
+
+        // Observa el tiempo restante.
+        viewModel.tiempoRestante.observe(viewLifecycleOwner) { tiempo ->
+            binding.temporizadorTextView.text = tiempo.toString()
+            if (tiempo == 0) {
+                Toast.makeText(requireContext(), "¡Se acabó el tiempo!", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_juegoFragment_to_incorrectFragment)
+            }
+
+
+        }
+
 
         // Configura listeners para los RadioButtons para verificar la respuesta seleccionada.
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
@@ -108,6 +121,7 @@ class JuegoFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        viewModel.detenerTemporizador() // Detiene el temporizador al destruir la vista
         _binding = null
     }
 }
