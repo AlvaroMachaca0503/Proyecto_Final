@@ -11,8 +11,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.juegopreguntas.R
+import androidx.fragment.app.activityViewModels
+
 
 class CorrectFragment : Fragment(R.layout.fragment_correct) {
+
+    private val viewModel: GameViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,7 +29,9 @@ class CorrectFragment : Fragment(R.layout.fragment_correct) {
         // la aplicación navegue al fragmento "JuegoFragment".
         val siguientePreguntaButton: Button = view.findViewById(R.id.siguientePreguntaButton)
         siguientePreguntaButton.setOnClickListener {
-            findNavController().navigate(R.id.action_correctFragment_to_juegoFragment)
+            viewModel.avanzarPregunta()  // Avanza a la siguiente pregunta
+            findNavController().navigate(R.id.action_correctFragment_to_juegoFragment)  // O `to_incorrectFragment`, dependiendo del fragmento
         }
+
     }
 }
